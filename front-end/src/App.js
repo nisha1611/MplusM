@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Signup from './components/signup';
+//import Signup from './components/signup';
+import SignUp from './components/SignUp';
 import Login from './components/Login';
 import {selectUser} from './features/userSlice'
 import { useSelector } from 'react-redux';
@@ -42,7 +43,10 @@ function App() {
       </Routes>
       <h1>Medicines Plus More</h1>
       </BrowserRouter> */}
-      {user ? <Logout/> : <Login/>}
+
+      {/* {user ? <Logout/> : <Login/>} */}
+
+      <SignUp />
     </div>
     
   );

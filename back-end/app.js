@@ -6,6 +6,7 @@ const alienRouter = require('./routes/aliens')
 const vendorRouter = require('./routes/vendors')
 const productRouter = require('./routes/products')
 const adminRouter = require('./routes/admin')
+const pharmacistRouter = require('./routes/pharmacist')
 
 const app = express()
 
@@ -27,6 +28,7 @@ app.use('/mplusm/aliens', alienRouter)
 app.use('/mplusm/admin', adminRouter)
 app.use('/mplusm/vendors', vendorRouter)
 app.use('/mplusm/products',productRouter)
+app.use('/mplusm/pharmacist',pharmacistRouter)
 
 app.listen(9000, function(){
     console.log("server started")
