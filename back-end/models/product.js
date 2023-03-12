@@ -1,32 +1,44 @@
 const mongoose = require('mongoose')
 
 const productSchema = new mongoose.Schema({
-    id:{
-        type: String,
-        required: true
-    },
+    
     productName:{
         type: String,
-        required: true
+       // required: true
     },
-    mfgDate:{  //is it required?
-        type: Date,
-        required: true
+    productDescription:{
+        type:String,
+        //required:true
     },
-    expDate:{
-        type: Date,
-        required: true
+    quantity:{
+        type:String,
+        //required:true
     },
+    // mfgDate:{  //is it required?
+    //     type: String,
+    //     required: true
+        
+    // },
+    // expDate:{
+    //     type: String,
+    //     required: true
+    // },
     brand:{
         type: String,
-        required: true
+       // required: true
+    },
+    pharmacyName:{
+        type:String,
+        //required:true
     },
     price:{
         type: Number,
-        required: true
+        //required: true
     },
-    category:{
-        type: String, //tbd
+    catagory: {
+        type: String,
+        //enum: ['tablets','ointments','creams','skincare','haircare','syrups','other'],
+        default: 'other'
     }
 })
 
